@@ -1,0 +1,39 @@
+# Enforce LF line endings for text files
+*.js     text eol=lf
+*.ts     text eol=lf
+*.tsx    text eol=lf
+*.jsx    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.css    text eol=lf
+*.scss   text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.html   text eol=lf
+*.mjs    text eol=lf
+*.cjs    text eol=lf
+*.sh     text eol=lf
+*.gitignore text eol=lf
+
+# Treat other files as text by default
+* text=auto
+
+# Prevent binary files from being modified
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.webp   binary
+*.mp4    binary
+*.ttf    binary
+*.woff   binary
+*.woff2  binary
+*.eot    binary
+*.otf    binary
+*.zip    binary
+*.pdf    binary
+
+# Ignore lock file diffs
+package-lock.json -diff
+yarn.lock -diff
