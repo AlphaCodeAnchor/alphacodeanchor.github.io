@@ -16,7 +16,7 @@
 *.gitignore text eol=lf
 
 # Treat other files as text by default
-* text=auto
+* text=auto eol=lf
 
 # Prevent binary files from being modified
 *.png    binary
