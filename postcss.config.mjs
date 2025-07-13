@@ -1,4 +1,6 @@
 // postcss.config.mjs
+import tailwindcssTypography from '@tailwindcss/typography'; // Import typography plugin
+
 export default {
   plugins: {
     // THIS IS THE CORRECT WAY to configure Tailwind CSS v4 in PostCSS,
@@ -7,8 +9,8 @@ export default {
       // All Tailwind CSS specific configuration (including plugins like typography)
       // now goes nested under this key.
       plugins: [
-        require('@tailwindcss/typography'),
-        // Add any other Tailwind CSS plugins here (e.g., require('@tailwindcss/forms'))
+        tailwindcssTypography, // Reference the imported typography plugin
+        // Add any other Tailwind CSS plugins here (e.g., import forms from '@tailwindcss/forms'; forms,)
       ],
       // If you have content configuration for Tailwind v4, it should also go here:
       // content: [
@@ -19,6 +21,6 @@ export default {
       // would also be defined within this object based on Tailwind v4's specific docs.
     },
     // Other PostCSS plugins go here, outside the '@tailwindcss/postcss' object
-    autoprefixer: {},
+    autoprefixer: {}, // Correctly configure autoprefixer as an object
   },
 };
