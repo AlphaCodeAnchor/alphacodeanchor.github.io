@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next export",
-    "deploy": "next build && gh-pages -d out --nojekyll --repo https://x-access-token:${GITHUB_TOKEN}@github.com/AlphaCodeAnchor/alphacodeanchor.github.io.git",
+    "deploy": "next build && gh-pages -d out --nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
