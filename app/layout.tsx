@@ -31,7 +31,6 @@ export default function RootLayout({
         <aside className="w-72 shrink-0 border-r border-border">
           <Sidebar />
         </aside>
-
         <main className="flex-1 overflow-auto">
           {children}
         </main>
