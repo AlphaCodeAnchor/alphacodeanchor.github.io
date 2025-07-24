@@ -10,7 +10,30 @@
     "deploy": "next build && gh-pages -d out --nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "electron:start": "electron ."
+    "electron:start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "codeanchortechdoc",
+    "productName": "CodeAnchorTechDocs",
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/.*",
+      "!**/test"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -43,6 +66,7 @@
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "electron": "^37.2.4",
+    "electron-builder": "^26.0.12",
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5"
