@@ -2,13 +2,15 @@
   "name": "codeanchor",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next export",
     "deploy": "next build && gh-pages -d out --nojekyll",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "electron:start": "electron ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -21,6 +23,7 @@
     "@next/mdx": "^15.3.5",
     "@types/mdx": "^2.0.13",
     "browserslist": "^4.25.1",
+    "express": "^5.1.0",
     "framer-motion": "^12.23.0",
     "fs": "^0.0.1-security",
     "next": "15.3.5",
@@ -39,6 +42,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "electron": "^37.2.4",
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5"
